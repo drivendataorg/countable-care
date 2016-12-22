@@ -1,0 +1,15 @@
+sudo apt-get install python-pip python-dev python-virtualenv build-essential -y
+sudo apt-get install libatlas-base-dev gfortran -y
+sudo apt-get build-dep python-matplotlib -y
+sudo apt-get install git unzip cmake libboost-all-dev -y
+
+git clone https://github.com/zeromq/libzmq
+cd libzmq && mkdir cmake-make && cd cmake-make && cmake .. && cd ../../
+
+sudo pip install pyzmq jinja2 jsonschema tornado
+sudo pip install ipython[all] numpy 
+sudo pip install scipy
+sudo pip install pandas
+sudo pip install matplotlib
+sudo pip install scikit-learn
+sudo pip install theanets

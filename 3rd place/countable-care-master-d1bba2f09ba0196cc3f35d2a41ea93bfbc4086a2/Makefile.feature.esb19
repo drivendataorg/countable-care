@@ -1,0 +1,87 @@
+include Makefile
+
+FEATURE_NAME := esb19
+
+BASE_MODELS := xg_100_8_0.05_feature8 \
+               xg_100_8_0.05_feature1 \
+               xg_100_8_0.05_feature9 \
+               xg_100_8_0.05_feature10 \
+               xg_bagging_120_7_0.1_feature9 \
+               gbm_bagging_40_7_0.1_feature10 \
+               nn_20_64_0.005_feature8 \
+               nn_20_8_0.01_feature3 \
+               nn_20_8_0.01_feature2 \
+               libfm_200_4_0.005_feature4 \
+               libfm_200_4_0.005_feature2 \
+               fm_200_8_0.001_feature3 \
+               fm_200_4_0.001_feature2 \
+               rf_400_40_feature5 \
+               rf_400_40_feature2 \
+               rf_400_40_feature9 \
+               rf_400_40_feature10 \
+               lr_0.1_feature4 \
+               lr_0.1_feature2
+
+PREDICTS_TRN := $(foreach m, $(BASE_MODELS), $(DIR_VAL)/$(m).val.csv)
+PREDICTS_TST := $(foreach m, $(BASE_MODELS), $(DIR_TST)/$(m).tst.csv)
+
+FEATURE_TRN := $(DIR_FEATURE)/$(FEATURE_NAME).trn.csv
+FEATURE_TST := $(DIR_FEATURE)/$(FEATURE_NAME).tst.csv
+
+FEATURE_TRN00 := $(DIR_FEATURE)/$(FEATURE_NAME).trn00.sps
+FEATURE_TST00 := $(DIR_FEATURE)/$(FEATURE_NAME).tst00.sps
+FEATURE_TRN01 := $(DIR_FEATURE)/$(FEATURE_NAME).trn01.sps
+FEATURE_TST01 := $(DIR_FEATURE)/$(FEATURE_NAME).tst01.sps
+FEATURE_TRN02 := $(DIR_FEATURE)/$(FEATURE_NAME).trn02.sps
+FEATURE_TST02 := $(DIR_FEATURE)/$(FEATURE_NAME).tst02.sps
+FEATURE_TRN03 := $(DIR_FEATURE)/$(FEATURE_NAME).trn03.sps
+FEATURE_TST03 := $(DIR_FEATURE)/$(FEATURE_NAME).tst03.sps
+FEATURE_TRN04 := $(DIR_FEATURE)/$(FEATURE_NAME).trn04.sps
+FEATURE_TST04 := $(DIR_FEATURE)/$(FEATURE_NAME).tst04.sps
+FEATURE_TRN05 := $(DIR_FEATURE)/$(FEATURE_NAME).trn05.sps
+FEATURE_TST05 := $(DIR_FEATURE)/$(FEATURE_NAME).tst05.sps
+FEATURE_TRN06 := $(DIR_FEATURE)/$(FEATURE_NAME).trn06.sps
+FEATURE_TST06 := $(DIR_FEATURE)/$(FEATURE_NAME).tst06.sps
+FEATURE_TRN07 := $(DIR_FEATURE)/$(FEATURE_NAME).trn07.sps
+FEATURE_TST07 := $(DIR_FEATURE)/$(FEATURE_NAME).tst07.sps
+FEATURE_TRN08 := $(DIR_FEATURE)/$(FEATURE_NAME).trn08.sps
+FEATURE_TST08 := $(DIR_FEATURE)/$(FEATURE_NAME).tst08.sps
+FEATURE_TRN09 := $(DIR_FEATURE)/$(FEATURE_NAME).trn09.sps
+FEATURE_TST09 := $(DIR_FEATURE)/$(FEATURE_NAME).tst09.sps
+FEATURE_TRN10 := $(DIR_FEATURE)/$(FEATURE_NAME).trn10.sps
+FEATURE_TST10 := $(DIR_FEATURE)/$(FEATURE_NAME).tst10.sps
+FEATURE_TRN11 := $(DIR_FEATURE)/$(FEATURE_NAME).trn11.sps
+FEATURE_TST11 := $(DIR_FEATURE)/$(FEATURE_NAME).tst11.sps
+FEATURE_TRN12 := $(DIR_FEATURE)/$(FEATURE_NAME).trn12.sps
+FEATURE_TST12 := $(DIR_FEATURE)/$(FEATURE_NAME).tst12.sps
+FEATURE_TRN13 := $(DIR_FEATURE)/$(FEATURE_NAME).trn13.sps
+FEATURE_TST13 := $(DIR_FEATURE)/$(FEATURE_NAME).tst13.sps
+
+FEATURES := $(FEATURE_TRN00) $(FEATURE_TRN01) $(FEATURE_TRN02)\
+                $(FEATURE_TRN03) $(FEATURE_TRN04) $(FEATURE_TRN05)\
+                $(FEATURE_TRN06) $(FEATURE_TRN07) $(FEATURE_TRN08)\
+                $(FEATURE_TRN09) $(FEATURE_TRN10) $(FEATURE_TRN11)\
+                $(FEATURE_TRN12) $(FEATURE_TRN13) $(FEATURE_TST00)\
+                $(FEATURE_TST01) $(FEATURE_TST02) $(FEATURE_TST03)\
+                $(FEATURE_TST04) $(FEATURE_TST05) $(FEATURE_TST06)\
+                $(FEATURE_TST07) $(FEATURE_TST08) $(FEATURE_TST09)\
+                $(FEATURE_TST10) $(FEATURE_TST11) $(FEATURE_TST12)\
+                $(FEATURE_TST13)
+
+$(FEATURE_TRN): $(PREDICTS_TRN) | $(DIR_FEATURE)
+	paste -d, $^ > $@
+
+$(FEATURE_TST): $(PREDICTS_TST) | $(DIR_FEATURE)
+	paste -d, $^ > $@
+
+$(FEATURES): $(YS_TRN) $(FEATURE_TRN) $(FEATURE_TST)
+	src/ensemble_features.py --label-file $< \
+                             --valid-file $(word 2, $^) \
+                             --test-file $(lastword $^) \
+                             --feature-dir $(DIR_FEATURE) \
+                             --feature-name $(FEATURE_NAME)
+
+clean:: clean_$(FEATURE_NAME)
+
+clean_$(FEATURE_NAME):
+	-rm $(FEATURE_TRN) $(FEATURE_TST) 

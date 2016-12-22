@@ -1,0 +1,50 @@
+#--------------------------------------------------------------------------
+# feature4: categorical feature cutoff = 10
+#--------------------------------------------------------------------------
+include Makefile
+
+FEATURE_NAME := feature4
+
+FEATURE_TRN00 := $(DIR_FEATURE)/$(FEATURE_NAME).trn00.sps
+FEATURE_TST00 := $(DIR_FEATURE)/$(FEATURE_NAME).tst00.sps
+FEATURE_TRN01 := $(DIR_FEATURE)/$(FEATURE_NAME).trn01.sps
+FEATURE_TST01 := $(DIR_FEATURE)/$(FEATURE_NAME).tst01.sps
+FEATURE_TRN02 := $(DIR_FEATURE)/$(FEATURE_NAME).trn02.sps
+FEATURE_TST02 := $(DIR_FEATURE)/$(FEATURE_NAME).tst02.sps
+FEATURE_TRN03 := $(DIR_FEATURE)/$(FEATURE_NAME).trn03.sps
+FEATURE_TST03 := $(DIR_FEATURE)/$(FEATURE_NAME).tst03.sps
+FEATURE_TRN04 := $(DIR_FEATURE)/$(FEATURE_NAME).trn04.sps
+FEATURE_TST04 := $(DIR_FEATURE)/$(FEATURE_NAME).tst04.sps
+FEATURE_TRN05 := $(DIR_FEATURE)/$(FEATURE_NAME).trn05.sps
+FEATURE_TST05 := $(DIR_FEATURE)/$(FEATURE_NAME).tst05.sps
+FEATURE_TRN06 := $(DIR_FEATURE)/$(FEATURE_NAME).trn06.sps
+FEATURE_TST06 := $(DIR_FEATURE)/$(FEATURE_NAME).tst06.sps
+FEATURE_TRN07 := $(DIR_FEATURE)/$(FEATURE_NAME).trn07.sps
+FEATURE_TST07 := $(DIR_FEATURE)/$(FEATURE_NAME).tst07.sps
+FEATURE_TRN08 := $(DIR_FEATURE)/$(FEATURE_NAME).trn08.sps
+FEATURE_TST08 := $(DIR_FEATURE)/$(FEATURE_NAME).tst08.sps
+FEATURE_TRN09 := $(DIR_FEATURE)/$(FEATURE_NAME).trn09.sps
+FEATURE_TST09 := $(DIR_FEATURE)/$(FEATURE_NAME).tst09.sps
+FEATURE_TRN10 := $(DIR_FEATURE)/$(FEATURE_NAME).trn10.sps
+FEATURE_TST10 := $(DIR_FEATURE)/$(FEATURE_NAME).tst10.sps
+FEATURE_TRN11 := $(DIR_FEATURE)/$(FEATURE_NAME).trn11.sps
+FEATURE_TST11 := $(DIR_FEATURE)/$(FEATURE_NAME).tst11.sps
+FEATURE_TRN12 := $(DIR_FEATURE)/$(FEATURE_NAME).trn12.sps
+FEATURE_TST12 := $(DIR_FEATURE)/$(FEATURE_NAME).tst12.sps
+FEATURE_TRN13 := $(DIR_FEATURE)/$(FEATURE_NAME).trn13.sps
+FEATURE_TST13 := $(DIR_FEATURE)/$(FEATURE_NAME).tst13.sps
+
+FEATURES := $(FEATURE_TRN00) $(FEATURE_TRN01) $(FEATURE_TRN02) $(FEATURE_TRN03)\
+            $(FEATURE_TRN04) $(FEATURE_TRN05) $(FEATURE_TRN06) $(FEATURE_TRN07)\
+            $(FEATURE_TRN08) $(FEATURE_TRN09) $(FEATURE_TRN10) $(FEATURE_TRN11)\
+            $(FEATURE_TRN12) $(FEATURE_TRN13) $(FEATURE_TST00) $(FEATURE_TST01)\
+            $(FEATURE_TST02) $(FEATURE_TST03) $(FEATURE_TST04) $(FEATURE_TST05)\
+            $(FEATURE_TST06) $(FEATURE_TST07) $(FEATURE_TST08) $(FEATURE_TST09)\
+            $(FEATURE_TST10) $(FEATURE_TST11) $(FEATURE_TST12) $(FEATURE_TST13)
+
+$(FEATURES): $(DATA_TRN) $(DATA_TST) $(LABEL_TRN) | $(DIR_FEATURE)
+	./src/generate_feature4.py --train-file $< \
+                               --label-file $(lastword $^) \
+                               --test-file $(word 2, $^) \
+                               --feature-dir $(DIR_FEATURE) \
+                               --feature-name $(FEATURE_NAME)
