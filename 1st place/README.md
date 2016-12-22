@@ -1,5 +1,5 @@
 # Countable Care: Modeling Women's Care Decisions - 1st Place
-
+<br> <br>
 # Entrant Background and Submission Overview
 
 ### Mini-bio
@@ -25,7 +25,7 @@ I evaluated the performance using a 4 fold cross validation in trainset using th
 * Try tuning the models using a grid search of hyper-parameters and for selecting features. It’s going to be very slow, but it can help a lot in the final ensemble.
 * Explore ensembling different training algorithms.
 
-
+<br><br>
 # Replicating the Submission
 Instruction for Linux Ubuntu 14.04, probably also runs under Windows.
 Code run ok in a i7 8 core CPU with 24GB RAM.
