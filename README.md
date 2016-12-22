@@ -1,5 +1,4 @@
-<a style='color:MidnightBlue' class='navbar-brand' href='https://www.drivendata.org/'>
-    <img src='https://s3.amazonaws.com/drivendata/images/logo-white.svg'</img>
+![](https://drivendata.s3.amazonaws.com/images/drivendata.png)
 <br><br>
 
 ![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
