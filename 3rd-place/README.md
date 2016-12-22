@@ -4,7 +4,7 @@
 # Entrant Background and Submission Overview
 
 ### Mini-bio
-I am a Data Scientist at XXXXX – marketing attribution platform startup in XXXXX.  I earned my Ph.D in Computer Science at XXXXX.  I have participated numerous Data Mining competitions since 2011, and won KDD Cup 2012, Criteo Display Ad, and Avito competitions.
+I earned my Ph.D in Computer Science.  I have participated numerous Data Mining competitions since 2011, and won KDD Cup 2012, Criteo Display Ad, and Avito competitions.
 
 ### High Level Summary of Submission
 Our approach is the ensemble of 20 individual classifiers with various algorithms and features.  The ensemble approach has been proved to outperform single algorithms in many competitions.  Also, we observed that target classes are not independent of each other, and wanted to capture the relationship between classes by using predictions for other classes as inputs to the class
