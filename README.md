@@ -9,11 +9,9 @@ Recent literature suggests that the demand for women’s health care will grow o
 
 Can you predict what drives women’s health care decisions in America?
 
-<br><br>
 ## What's in this Repository
 This repository contains code volunteered from leading competitors in the [Countable Care: Modeling Women's Care Decisions](https://www.drivendata.org/competitions/6/) on DrivenData.
 
-<br><br>
 ## Winning Submissions
 
 Place |Team or User | Public Score | Private Score | Summary of Model
