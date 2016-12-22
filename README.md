@@ -1,4 +1,4 @@
-![](https://drivendata.s3.amazonaws.com/images/drivendata.png)
+[<img src='https://drivendata.s3.amazonaws.com/images/drivendata.png'>](https://www.drivendata.org/)
 <br><br>
 
 ![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
@@ -10,10 +10,11 @@ Recent literature suggests that the demand for women’s health care will grow o
 
 Can you predict what drives women’s health care decisions in America?
 
+<br><br>
 ## What's in this Repository
 This repository contains code volunteered from leading competitors in the [Countable Care: Modeling Women's Care Decisions](https://www.drivendata.org/competitions/6/) on DrivenData.
 
-
+<br><br>
 ## Winning Submissions
 
 Place |Team or User | Public Score | Private Score | Summary of Model
