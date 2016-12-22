@@ -1,3 +1,4 @@
+![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
 # Countable Care: Modeling Women's Care Decisions - 2nd Place
 <br><br>
 # Replicating the Submission

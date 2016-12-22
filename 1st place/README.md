@@ -1,3 +1,4 @@
+![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
 # Countable Care: Modeling Women's Care Decisions - 1st Place
 <br> <br>
 # Entrant Background and Submission Overview
