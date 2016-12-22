@@ -1,6 +1,6 @@
 # Countable Care: Modeling Women's Care Decisions - 1st Place
 
-## Entrant Background and Submission Overview
+# Entrant Background and Submission Overview
 
 ### Mini-bio
 I have a MS in Electronic Engineering. In the past 16 years I've been working as an Electronic Engineer for big multinationals. In 2008 I started teaching myself the techniques of machine learning, by first turning to improving personal stock market gains and later learning a lot of techniques to improve generic predictions. In 2012, I joined the Kaggle competition site and won a couple of competitions and achieved good results in some others, improving my machine learning skills in many areas.
@@ -26,7 +26,7 @@ I evaluated the performance using a 4 fold cross validation in trainset using th
 * Explore ensembling different training algorithms.
 
 
-## Replicating the Submission
+# Replicating the Submission
 Instruction for Linux Ubuntu 14.04, probably also runs under Windows.
 Code run ok in a i7 8 core CPU with 24GB RAM.
 
