@@ -1,10 +1,11 @@
-[<img src='https://s3.amazonaws.com/drivendata/images/logo-white.svg'</img>](https://www.drivendata.org/)
+<a style='color:MidnightBlue' class='navbar-brand' href='https://www.drivendata.org/'>
+    <img src='https://s3.amazonaws.com/drivendata/images/logo-white.svg'</img>
 <br><br>
 
 ![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
 
 # Countable Care: Modeling Women's Care Decisions
-
+<br><br>
 ## Goal of the Competition
 Recent literature suggests that the demand for women’s health care will grow over 6% by 2020. Given how rapidly the health landscape has been changing over the last 15 years, it’s increasingly important that we understand how these changes affect what care people receive, where they go for it, and how they pay. Through the National Survey of Family Growth, the CDC provides one of the few nationally representative datasets that dives deep into the questions that women face when thinking about their health.
 
