@@ -1,5 +1,5 @@
 # Countable Care: Modeling Women's Care Decisions - 3rd Place
-
+<br><br>
 # Entrant Background and Submission Overview
 
 ### Mini-bio
@@ -20,6 +20,7 @@ We used 5-fold cross validation scores of log loss and AUC.
 ### Future Steps
 * We’d like to add deep learning and other algorithms to individual models.
 
+<br><br>
 # Replicating the Submission
 
 The code assumes raw data is available under the `data` folder, and saves outputs in the `build` folder.
