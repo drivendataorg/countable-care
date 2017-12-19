@@ -12,10 +12,13 @@ Can you predict what drives women’s health care decisions in America?
 ## What's in this Repository
 This repository contains code volunteered from leading competitors in the [Countable Care: Modeling Women's Health Care Decisions](https://www.drivendata.org/competitions/6/) on DrivenData.
 
+#### Winning code for other DrivenData competitions is available in the [competition-winners repository](https://github.com/drivendataorg/competition-winners).
+
+
 ## Winning Submissions
 
 Place |Team or User | Public Score | Private Score | Summary of Model
---- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- 
 1 | giba | 0.2482 | 0.2539 | I decided to quit using a simple feature selection and use the ensemble technique to better explore feature interaction between all features and different learning techniques.
 2 | 1aguschin | 0.2492 | 0.2543 | Stacking is a technique of combining predictions of different classifiers in new meta-classifier. After averaging predictions received with different random splits we are making new meta-feature which will be used in our meta-classifier
 3 | JYL | 0.2497 | 0.2549 | Our approach is the ensemble of 20 individual classifiers with various algorithms and features.
