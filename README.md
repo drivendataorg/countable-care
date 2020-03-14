@@ -1,4 +1,4 @@
-[<img src='https://community.drivendata.org/uploads/default/optimized/1X/e055d38472b1ae95f54110375180ceb4449c026b_1_690x111.png'>](https://www.drivendata.org/)
+[<img src='https://s3.amazonaws.com/drivendata-public-assets/logo-white-blue.png' style="max-width:85%;>](https://www.drivendata.org/)
 <br><br>
 
 ![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
@@ -18,7 +18,7 @@ This repository contains code volunteered from leading competitors in the [Count
 ## Winning Submissions
 
 Place |Team or User | Public Score | Private Score | Summary of Model
---- | --- | --- | --- | --- 
+--- | --- | --- | --- | ---
 1 | giba | 0.2482 | 0.2539 | I decided to quit using a simple feature selection and use the ensemble technique to better explore feature interaction between all features and different learning techniques.
 2 | 1aguschin | 0.2492 | 0.2543 | Stacking is a technique of combining predictions of different classifiers in new meta-classifier. After averaging predictions received with different random splits we are making new meta-feature which will be used in our meta-classifier
 3 | JYL | 0.2497 | 0.2549 | Our approach is the ensemble of 20 individual classifiers with various algorithms and features.
