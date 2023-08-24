@@ -4,16 +4,18 @@
 ![Banner Image](https://s3.amazonaws.com/drivendata/comp_images/ppfa_tile.jpg)
 
 # Countable Care: Modeling Women's Care Decisions
+
 ## Goal of the Competition
+
 Recent literature suggests that the demand for women’s health care will grow over 6% by 2020. Given how rapidly the health landscape has been changing over the last 15 years, it’s increasingly important that we understand how these changes affect what care people receive, where they go for it, and how they pay. Through the National Survey of Family Growth, the CDC provides one of the few nationally representative datasets that dives deep into the questions that women face when thinking about their health.
 
 Can you predict what drives women’s health care decisions in America?
 
 ## What's in this Repository
-This repository contains code volunteered from leading competitors in the [Countable Care: Modeling Women's Health Care Decisions](https://www.drivendata.org/competitions/6/) on DrivenData.
 
-#### Winning code for other DrivenData competitions is available in the [competition-winners repository](https://github.com/drivendataorg/competition-winners).
+This repository contains code volunteered from leading competitors in the [Countable Care: Modeling Women's Health Care Decisions](https://www.drivendata.org/competitions/6/) on DrivenData. Code for all winning solutions are open source under the MIT License.
 
+**Winning code for other DrivenData competitions is available in the [competition-winners repository](https://github.com/drivendataorg/competition-winners).**
 
 ## Winning Submissions
 
@@ -24,4 +26,4 @@ Place |Team or User | Public Score | Private Score | Summary of Model
 3 | JYL | 0.2497 | 0.2549 | Our approach is the ensemble of 20 individual classifiers with various algorithms and features.
 
 
-#### Winner's Interview: [Gilberto Titericz](http://blog.drivendata.org/2015/08/11/countable-care-interview-gilberto-titericz-jr/)
+**Winner's Interview: [Gilberto Titericz](https://drivendata.co/blog/countable-care-interview-gilberto-titericz-jr/)**
